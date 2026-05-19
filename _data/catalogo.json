@@ -1,0 +1,67 @@
+[
+     {
+      "ID": "API001",
+      "Categoria": "API de Datos Abiertos",
+      "Entidad": "Ministerio de Finanzas Públicas (MINFIN)",
+      "Nombre del Servicio\/API": "API de Datos Abiertos MINFIN",
+      "Descripción": "Acceso a información financiera y presupuestaria pública.",
+      "URL de Acceso": "datos.minfin.gob.gt\/api\/3\/action",
+      "Versión": "1.0",
+      "Tipo": "API",
+      "Protocolos de Seguridad": "API Key, Token",
+      "Formatos de Datos": "JSON, CSV",
+      "Estado": "Disponible"
+     },
+     {
+      "ID": "API002",
+      "Categoria": "API de Datos Abiertos",
+      "Entidad": "Ministerio de Educación (MINEDUC)",
+      "Nombre del Servicio\/API": "API de Datos Educativos MINEDUC",
+      "Descripción": "Consulta de datos sobre cobertura educativa, inversión y estadísticas de escuelas.",
+      "URL de Acceso": "datos.mineduc.gob.gt\/api\/3\/action",
+      "Versión": "1.1",
+      "Tipo": "API",
+      "Protocolos de Seguridad": "API Key",
+      "Formatos de Datos": "JSON, XML",
+      "Estado": "Disponible"
+     },
+     {
+      "ID": "API003",
+      "Categoria": "API de Datos Abiertos",
+      "Entidad": "Ministerio de Salud Pública y Asistencia Social (MSPAS)",
+      "Nombre del Servicio\/API": "API de Datos de Salud MSPAS",
+      "Descripción": "Acceso a estadísticas de hospitales, atención médica, vacunaciones y COVID-19.",
+      "URL de Acceso": "datos.mspas.gob.gt\/api\/3\/action",
+      "Versión": "1.0",
+      "Tipo": "API",
+      "Protocolos de Seguridad": "OAuth2",
+      "Formatos de Datos": "JSON, CSV",
+      "Estado": "Disponible"
+     },
+     {
+      "ID": "API004",
+      "Categoria": "API de Datos Abiertos",
+      "Entidad": "Secretaría de Planificación y Programación de la Presidencia (SEGEPLAN)",
+      "Nombre del Servicio\/API": "API de Datos Abiertos SEGEPLAN",
+      "Descripción": "Información de planificación, inversión pública y proyectos de desarrollo.",
+      "URL de Acceso": "datos.segeplan.gob.gt\/api\/3\/action",
+      "Versión": "1.2",
+      "Tipo": "API",
+      "Protocolos de Seguridad": "API Key",
+      "Formatos de Datos": "JSON, CSV",
+      "Estado": "Disponible"
+     },
+     {
+      "ID": "API005",
+      "Categoria": "API de Datos Abiertos",
+      "Entidad": "Instituto Nacional de Estadística (INE)",
+      "Nombre del Servicio\/API": "API de Estadísticas INE",
+      "Descripción": "Acceso a censos, indicadores económicos y demográficos.",
+      "URL de Acceso": "datos.ine.gob.gt\/api\/3\/action",
+      "Versión": "2.0",
+      "Tipo": "API",
+      "Protocolos de Seguridad": "Token de acceso",
+      "Formatos de Datos": "JSON, XML, CSV",
+      "Estado": "Disponible"
+     }
+]

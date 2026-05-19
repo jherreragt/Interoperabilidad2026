@@ -1,0 +1,89 @@
+---
+pagination:
+  data: catalogo
+  size: 8
+  alias: catalogo
+permalink: "catalogo/{{ pagination.pageNumber + 1}}/index.html"
+---
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>Catálogo de Servicios | Gobierno Digital</title>
+{% endblock %}
+
+{% block content %}
+
+        <!-- Slider
+		============================================= -->
+		<section id="slider" class="bg-color">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-lg-6 col-md-12 col-sm-12 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
+
+						<h2 class="text-slider mb-4" style="font-size:40px!important">Catálogo de Servicios
+                        </h2>
+						<h2 class="text-slider2">
+                            lorem ipsum dolor sit amet
+						</h2>
+
+					</div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end align-self-center flex-column pt-5 pb-0 py-lg-6 mb-0 my-lg-4">
+
+						<img src="/assets/img/slider/plangobierno.png">
+
+					</div>
+				</div>
+			</div>
+        </section>
+
+        
+
+        <!-- catalogo
+        ============================================= -->
+
+        <section class="px-2">
+            <div class="container clearfix ">
+                <div class="row py-6">
+                    
+                    {% for cata in catalogo %}
+                    <div class="col-lg-4 my-4">
+                        <div class="catalogo-card">
+                            <div class="catalogo-header">
+                                <h5 class="catalogo-title">{{cata.ID}} | {{cata['Nombre del Servicio\/API']}}</h5>
+                            </div>
+                            <div class="catalogo-body">
+                                <p><b>Categoría:</b> {{cata['Categoria']}}</p>
+                                <div class="linea-gris"></div>
+                                <p><b>Entidad:</b> {{cata.Entidad}}</p>
+                                <div class="linea-gris"></div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p><b>Versión:</b> {{cata['Versión']}}</p>
+                                        <p><b>Tipo:</b> {{cata['Tipo']}}</p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p><b>Protocolos de Seguridad:</b> {{cata['Protocolos de Seguridad']}}</p>
+                                        <p><b>Formatos de Datos:</b> {{cata['Formatos de Datos']}}</p>
+                                    </div>
+                                </div>
+                                <div class="linea-gris"></div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p><b>Estado: </b>{{cata.Estado}}</p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <a class="btn" href="{{cata['URL de Acceso']}}">Explora el Servicio</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>{{ title }}</title>
+<link rel="stylesheet" href="/css/maingrid.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    
+
+<!-- Slider
+		============================================= -->
+		<section id="slider" class="bg-color">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-8 col-md-12 col-sm-12 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-0 my-lg-4 text-center">
+
+            {% if title == "Gobierno Digital" %}
+						<img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-46.png">
+            {% elif title == "Interoperabilidad" %}
+            <img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-47.png">
+            {% elif title == "Datos Abiertos" %}
+            <img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-48.png">
+            {% elif title == "Accesibilidad e Inclusión Digital" %}
+            <img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-49.png">
+            {% elif title == "Tecnologías Emergentes" %}
+            <img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-50.png">
+            {% elif title == "Infraestructura Pública Digital" %}
+            <img style="width: 20%;margin: auto;" src="/assets/img/iconos/TD-51.png">
+            {% endif%}
+						<h2 class="text-slider mb-4" style="font-size:40px!important">{{title}}</h2>
+            <p class=" text-1xl">
+              {{ description }}
+            </p>
+
+
+					</div>
+				</div>
+			</div>
+    </section>
+
+    <!--POST-->
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-lg-12 my-5">
+
+          <div class="content-blog">
+            <!--autor correo fecha-->
+            <p>
+              {{ date|dateFormat('DD/MM/YYYY')}}
+              <br><br>
+            </p>
+            {{ content | safe}}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Transformacion Digital
+    ============================================= -->
+
+    <section class="px-2" style="background-color: #e9f0f8;">
+      <div class="container clearfix ">
+          <div class="row py-6">
+              
+              <div class="col-lg-12 text-center mb-4">
+
+                  <h1 class="text-titles">Ver más dominios:</h1>
+
+                  <!-- <a href="#" class="btn">Ir a productos <i class="fa-solid fa-right-long"></i></a> -->
+              </div>
+
+              {% for trans in collections.transformacion | limit(3)%}
+                <div class="col-lg-4 my-4 text-center">
+                    <a href="{{trans.url}}"><div class="cuadro_plataformas">
+                        <img src="{{trans.data.image}}">
+                        <h2 class="text-titles hover_white">{{trans.data.title}}</h2>
+                        <p>{{trans.data.description}}</p>
+                    </div></a>
+                </div>
+                {% endfor %}
+
+          </div>
+      </div>
+  </section>
+
+{% endblock %}
